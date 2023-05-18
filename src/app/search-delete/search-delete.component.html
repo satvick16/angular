@@ -1,1 +1,33 @@
-<p>search-delete works!</p>
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <form>
+                <fieldset style="margin-top: 50px;">
+                    <h3 style="text-align: center;">Find Greeting History by ID</h3>
+
+                    <div class="form-group" style="margin-top: 50px;">
+                        <!-- <label for="Name"><span class="req">* </span> Name: </label> -->
+                        <input required type="text" [(ngModel)]="id" name="id" id="id"
+                            class="form-control phone" maxlength="28" placeholder="Enter an id..." />
+                    </div>
+
+                    <div class="form-group">
+                        <input class="btn btn-success" type="submit" name="submit_reg" value="Search" (click)="findGreetingHistory()">
+                    </div>
+                </fieldset>
+            </form><!-- ends register form -->
+            <!-- second for to fiter user-->
+
+            <fieldset style="margin-top: 50px;">
+                <h4>Greeting history:</h4>
+                <app-entry *ngFor="let entry of history" [entry]="entry"></app-entry>
+            </fieldset>
+        </div><!-- ends col-6 -->
+        
+    </div>
+</div>

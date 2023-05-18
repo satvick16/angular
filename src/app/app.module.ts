@@ -10,13 +10,15 @@ import { GreetingCreatorService } from './greeting-creator.service';
 import { HttpClientModule } from '@angular/common/http'
 import { FormsModule } from '@angular/forms';
 import { ItemComponent } from './item/item.component';
+import { EntryComponent } from './entry/entry.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CreatorComponent,
     SearchDeleteComponent,
-    ItemComponent
+    ItemComponent,
+    EntryComponent
   ],
   imports: [
     BrowserModule,

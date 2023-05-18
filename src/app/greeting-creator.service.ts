@@ -17,4 +17,8 @@ export class GreetingCreatorService {
     return this.http.post("http://localhost:8080/greeting?name=" + greeting.content, null, {responseType:'text' as 'json'});
   }
 
+  public getHistory(id: number) {
+    return this.http.get<string[][]>("http://localhost:8080/history/" + id);
+  }
+
 }
